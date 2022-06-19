@@ -62,7 +62,7 @@ def query_answer(param: str):
     :return:
     """
     stmt = select(ResumeSubmission).where(ResumeSubmission.question == param)
-    obj = session.scalars(stmt).one()
+    obj = session.scalars(stmt).first()
     return obj.answer
 
 
