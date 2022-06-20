@@ -1,6 +1,6 @@
 
 
-def compare_nodes(dict_words: dict, start: str, end: str) -> str:
+def compare_nodes(tree: dict, start: str, end: str) -> str:
     """
     Compare which is higher or lower
     :param dict_words: {A:B,C:D,D:C}
@@ -9,20 +9,20 @@ def compare_nodes(dict_words: dict, start: str, end: str) -> str:
     :return: str
     ex:'>' or '<'
     """
-    if start not in dict_words:
-        dict_words[start] = None
 
-    if end not in dict_words:
-        dict_words[end] = None
+    symbols = ['A', 'B', 'C', 'D']
+    for s in symbols:
+        if s not in tree:
+            tree[s] = None
 
     new_start = end
     new_end = start
     count = 0
-    while count <= dict_words.__len__():
+    while count <= tree.__len__():
         if new_start is not None:
-            new_start = dict_words[new_start]
+            new_start = tree[new_start]
         if new_end is not None:
-            new_end = dict_words[new_end]
+            new_end = tree[new_end]
         if new_start == start:
             return '<'
         if new_end == end:

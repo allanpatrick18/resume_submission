@@ -12,7 +12,5 @@ def test_puzzle():
     """
 
     matrix_str = solve_puzzle(_puzzle)
-    print(matrix_str)
-    assert 30 == len(list(matrix_str))
     assert 30 == len(list(matrix_str))
 
