@@ -14,3 +14,15 @@
 
     http://localhost:8000/docs
     
+    
+### Addicional Docs
+    
+    
+![fast api docs](/docs/fast_api_documentation.png)
+
+![submission](/docs/submission.png)
+
+![coverage](/docs/report_converage.png)
+
+![dir](/docs/dir_structure.jpg)
+
